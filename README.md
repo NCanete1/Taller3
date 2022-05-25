@@ -13,4 +13,4 @@ Clases Identificadas:
 Relaciones Presentes:
 -Composicion (Hoja--->Cuaderno) 
 -Dependencia(Escribir-->Cuaderno)
--Composicion(Quitar--->Hoja)
+-Dependencia(Quitar--->Hoja)

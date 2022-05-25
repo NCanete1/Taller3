@@ -3,26 +3,28 @@ import java.util.List;
 
 public class Cuaderno {
 
-    private ArrayList<Hoja>bs;
+    private List<Hoja> hojaList;
     Escribir escribir= new Escribir();
 
-    private ArrayList<Hoja> getBs() {
-        return bs;
+    private List<Hoja> getHojaList() {
+        return hojaList;
     }
 
-    public void setBs(ArrayList<Hoja> bs) {
-        this.bs = bs;
+    public void setHojaList(List<Hoja> hojaList) {
+        this.hojaList = hojaList;
     }
 
     public Cuaderno(){
-        this.bs= new ArrayList<Hoja>(100);
+        this.hojaList = new ArrayList<Hoja>(100);
     }
 
     public void Escribir(int cant_hojas){
-        for(int i=0; i<cant_hojas;i++){
-            bs.set(i,escribir.Escribir());
+        int i= cant_hojas;
+        if(i>this.hojaList.size()||i<this.hojaList.size()) {
+            for (i = 0; i < cant_hojas; i++) {
+                hojaList.get(i).setHoja(escribir.Escribir());
+            }
         }
-
     }
 
 }

@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class QuitarHoja {
-    private ArrayList<Hoja>bs;
-
-    public void ArrancarHoja(int n_quitar){
-
+    public void ArrancarHoja(ArrayList hoja,int n_quitar){
+        for(int i=0;i<n_quitar;i++) {
+            hoja.remove(n_quitar);
         }
+    }
     }
